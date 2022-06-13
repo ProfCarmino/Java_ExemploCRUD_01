@@ -1,2 +1,5 @@
 # Java_ExemploCRUD_01
-## É um exemplo simples para introduzir o assunto de GUI e CRUD para os alunos de JAVA
+## Descrição do Projeto
+<p align="justify"> Este projeto é uma aplicação que descreve de forma simples os conceitos de um CRUD  utilizando um JTable simples de forma padrão </p>
+
+
