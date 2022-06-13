@@ -1,3 +1,7 @@
+/*
+* Este é um arquivo que constroe as conexões 
+* para serem utilizadas no sistema
+*/
 package Conexao;
 import java.sql.*;
 public class ConnectionFactory {
@@ -9,6 +13,15 @@ public class ConnectionFactory {
         Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
         return connection;
     }
+    /*
+    **********************************************************
+    * este trecho é utilizado para o teste inicial da conexão 
+    * porém pode ser retirado após o teste 
+    * para retornar bastar desfazer o comentário 
+    **********************************************************
+    */
+    
+    /*
     public static void main(String[] args) throws Exception {
         Connection con = createConnectionToMySQL();
         if(con!= null){
@@ -16,4 +29,6 @@ public class ConnectionFactory {
             con.close();
         }
     }
+    */
+    
 }
