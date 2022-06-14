@@ -98,7 +98,7 @@ public class ClienteDao {
     }
 
     public void update(ClienteModel cliente) throws Exception {
-        String sql = "UPDATE CLIENTE SET nome=?,endereco=? WHERE IdCliente = ?";
+        String sql = "UPDATE CLIENTE SET nome=?,endereco=? WHERE IdCliente = " + cliente.getIdCliente();
         Connection conn = null;
         PreparedStatement pstm = null;
         try {
@@ -106,8 +106,6 @@ public class ClienteDao {
             pstm = (PreparedStatement) conn.prepareStatement(sql);
             pstm.setString(1, cliente.getNome());
             pstm.setString(2, cliente.getEndereco());
-            //pstm.setDate(3, new Date(cliente.getDataCadastro().getTime()));
-            pstm.setInt(3, cliente.getIdCliente());
             pstm.execute();
         } catch (Exception e) {
             e.printStackTrace();
