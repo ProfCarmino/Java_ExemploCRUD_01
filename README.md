@@ -20,8 +20,12 @@ Pronto para a IDE netbeans
 Prof. José Carmino Gomes Jr.
 
 ## Tarefas a fazer 
-Botões 
-    * consulta 
-    * editar 
+Tela clientes 
+    Botões 
+        * consulta 
+
+Tela Login 
+        Botões 
+            * Login
 
 
