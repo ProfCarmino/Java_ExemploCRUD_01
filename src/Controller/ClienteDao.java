@@ -5,6 +5,7 @@ import Conexao.ConnectionFactory;
 import Modelo.ClienteModel;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 public class ClienteDao {
     /*
@@ -142,7 +143,9 @@ public class ClienteDao {
                 clientes.add(cliente);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "alerta","alerta", JOptionPane.ERROR_MESSAGE);
+            return null;
+            //e.printStackTrace();
         } finally {
             try {
                 if (rset != null) {
@@ -157,7 +160,8 @@ public class ClienteDao {
                     conn.close();
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                //e.printStackTrace();
+                return null;
             }
         }
         return clientes;
