@@ -44,6 +44,7 @@ public class ClienteDao {
         Connection conn = null;
         PreparedStatement pstm = null;
         ResultSet rset = null;
+        
         try {
             conn = ConnectionFactory.createConnectionToMySQL();
             pstm = (PreparedStatement) conn.prepareStatement(sql);

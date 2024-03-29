@@ -4,6 +4,9 @@
  */
 package Janela;
 
+import Controller.LoginDao;
+import Modelo.LoginModel;
+
 /**
  *
  * @author profj
@@ -126,9 +129,17 @@ public class Login extends javax.swing.JFrame {
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
-        ClienteJanela Janela = new ClienteJanela();
-        Janela.setVisible(true);
-        this.dispose();
+        LoginDao verLogin = new LoginDao(); 
+        LoginModel DadosLogin = new LoginModel();
+        
+        DadosLogin.setSenha(viewSenha.getText());
+        DadosLogin.setUsername(viewUsuario.getText());
+                       
+        verLogin.logar(DadosLogin);
+                
+        //ClienteJanela Janela = new ClienteJanela();
+        //Janela.setVisible(true);
+        //this.dispose();
     }//GEN-LAST:event_loginActionPerformed
 
 /*

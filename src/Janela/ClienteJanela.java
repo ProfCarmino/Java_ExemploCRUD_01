@@ -268,6 +268,7 @@ public class ClienteJanela extends javax.swing.JFrame {
         DefaultTableModel ModCli = (DefaultTableModel) ListaClientes.getModel();
         ModCli.setNumRows(0);
         ClienteDao Cliente = new ClienteDao();
+        /*
         for(ClienteModel p: Cliente.getClientes()){
             ModCli.addRow(new Object[]{
                 p.getIdCliente(),
@@ -275,7 +276,7 @@ public class ClienteJanela extends javax.swing.JFrame {
                 p.getEndereco(),
                 p.getDataCadastro()
             });
-        } 
+        } */
     }
     private void novoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novoActionPerformed
         // TODO add your handling code here:
